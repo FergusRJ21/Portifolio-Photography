@@ -1,0 +1,14 @@
+# Documentação: Configuração de Build e Deploy para o Netlify
+# Arquivo: netlify.toml
+
+[build]
+  # Comando exato que o Netlify executará no servidor para compilar o Next.js
+  command = "npm run build"
+  
+  # Diretório onde o Next.js salva a aplicação compilada e pronta para produção
+  publish = ".next"
+
+# A configuração de plugins garante que o Netlify instale o adaptador essencial 
+# para processar os Server Components nativos do Next.js.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
