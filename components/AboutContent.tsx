@@ -3,7 +3,7 @@
 
 "use client"; // Mantemos como componente de cliente para as animações
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image"; // Importamos o componente de imagem do Next.js
 
 export default function AboutContent() {
@@ -17,7 +17,7 @@ export default function AboutContent() {
     };
 
     // Variantes para cada item individual deslizar de baixo para cima
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { opacity: 0, y: 20 },
         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
     };

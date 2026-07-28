@@ -3,7 +3,7 @@
 
 "use client"; // Habilita a interatividade (estados e eventos de clique) no navegador
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import { X } from "lucide-react"; // Ícone de "Fechar"
 import Image from "next/image";
 import { useState } from "react";
@@ -32,7 +32,7 @@ const containerVariants = {
     show: { opacity: 1, transition: { staggerChildren: 0.15 } }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
